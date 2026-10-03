@@ -1,0 +1,44 @@
+EBEN Eyecare & Opticals — PNG assets
+
+BRAND / HERO
+logo.png — header/footer logo reference
+hero_banner.png — complete homepage hero banner
+
+SERVICE ICONS
+icon_eye_testing.png
+icon_prescription_eyeglasses.png
+icon_sunglasses.png
+icon_lens_consultation.png
+icon_frame_adjustments.png
+icon_eye_care_guidance.png
+
+COLLECTION PHOTOS
+frames.png
+contact_lenses.png
+safety_glasses.png
+kids_eyewear.png
+sunglasses.png
+mens_eyewear.png
+womens_eyewear.png
+blue_light_glasses.png
+premium_collection.png
+
+GALLERY PHOTOS
+gallery_store.png
+gallery_frames_display.png
+gallery_sunglasses_display.png
+gallery_eye_test.png
+gallery_kids.png
+gallery_customer.png
+
+WHY CHOOSE US ICONS
+icon_quality_eyewear.png
+icon_personal_attention.png
+icon_professional_service.png
+icon_convenient_location.png
+
+OTHER
+store_map.png
+
+These PNGs are cropped from the approved UI mockup and are intended as coding references/assets.
+For production, replace stock/generated photos with your own shop and product photography when available.
