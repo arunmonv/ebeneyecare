@@ -247,14 +247,11 @@
 
         <!-- Quick contact row -->
         <div class="hidden lg:flex mt-5 flex-col sm:flex-row sm:flex-wrap lg:flex-nowrap sm:items-center gap-y-3 text-xs text-slate-700 lg:divide-x divide-slate-300">
-          <div class="flex items-start gap-2 sm:pr-5">
+          <div class="flex items-center gap-2 lg:pr-5">
             <i data-lucide="map-pin" class="w-5 h-5 text-brand-dark shrink-0"></i>
             <span>Inigo Hospital, Palliyadi,<br />Kanyakumari, Tamil Nadu - 629169</span>
           </div>
-          <a href="tel:+918754126126" class="flex items-center gap-2 sm:px-5 hover:text-brand">
-            <i data-lucide="phone" class="w-5 h-5 text-brand-dark"></i> 8754126126
-          </a>
-          <a href="mailto:ebeneyecareandopticals@gmail.com" class="flex items-center gap-2 sm:pl-5 hover:text-brand">
+          <a href="mailto:ebeneyecareandopticals@gmail.com" class="flex items-center gap-2 lg:pl-5 text-[13px] font-semibold text-brand hover:text-brand-dark hover:underline underline-offset-4 transition">
             <i data-lucide="mail" class="w-5 h-5 text-brand-dark shrink-0"></i> <span class="whitespace-nowrap">ebeneyecareandopticals@gmail.com</span>
           </a>
         </div>
@@ -858,6 +855,21 @@
       if (e.key === 'Escape') hide();
       if (e.key === 'ArrowLeft') show(current - 1);
       if (e.key === 'ArrowRight') show(current + 1);
+    });
+
+    // ---------- Email links: open a compose window ----------
+    // Phones/tablets use the normal mailto: link (opens the device's mail app).
+    // Desktops often have no mail app set up, so open Gmail's compose window in a new tab instead.
+    const isTouchDevice = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || navigator.maxTouchPoints > 1;
+    document.querySelectorAll('a[href^="mailto:"]').forEach(a => {
+      a.addEventListener('click', e => {
+        if (isTouchDevice) return;                       // let the phone's mail app handle it
+        e.preventDefault();
+        const to = a.getAttribute('href').replace('mailto:', '');
+        const url = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(to) +
+                    '&su=' + encodeURIComponent('Enquiry from website');
+        window.open(url, '_blank', 'noopener');
+      });
     });
 
     // ---------- Mobile menu ----------
